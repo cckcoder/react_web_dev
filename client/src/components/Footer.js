@@ -3,8 +3,15 @@ import React from 'react'
 const Footer = (props) => {
     const {company, email} = props
     return (
-        <div>Powered By {company} | Contact By Email: {email}</div>
+        <div className="container-fluid">
+            <hr/>
+            <div className="text-center title text-uppercase">
+                <small> 
+                    <span className="text-danger">Powered By {company}</span> | Contact By Email: {email}
+                </small>
+            </div>
+        </div>
     )
-}
+};
 
 export default Footer;
