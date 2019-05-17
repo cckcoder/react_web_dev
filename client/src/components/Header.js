@@ -13,7 +13,7 @@ class Header extends Component{
     }
 
     componentDidUpdate() {
-        console.log('componentDidUpdate')
+      
     }
 
     componentWillUnmount() {

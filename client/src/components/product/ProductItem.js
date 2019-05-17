@@ -1,16 +1,13 @@
 import React, { Component } from 'react'
 
 class ProductItem extends Component {
+
     constructor(props) {
         super(props);
     }
 
-    doSomething(productName) {
-        console.log(productName)
-    }
-
 	render() {
-		const {productName, unitPrice, thumbnail} = this.props;
+		const {productName, unitPrice, thumbnail} = this.props.product;
         return (
             <div className="col-md-3 col-sm-6">
                 <img className="img-fluid img-thumbnail" src={thumbnail} alt=""/>
@@ -18,7 +15,8 @@ class ProductItem extends Component {
                 <p className="title text-right">{unitPrice} THB</p>
                 <button
                     className="btn btn-block btn-secondary title"
-                    onClick={() => this.doSomething(productName)}
+                    value={unitPrice}
+                    onClick={() => this.props.onAddOrder(this.props.product)}
                 >
                     buy
                 </button>
